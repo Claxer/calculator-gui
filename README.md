@@ -12,6 +12,7 @@ A simple calculator application with a graphical user interface (GUI) built usin
 - Division
 - Clear button
 - Error handling for invalid expressions
+- Display previous calculation result
 - Simple and easy-to-use graphical interface
 
 ## Technologies Used
@@ -33,6 +34,9 @@ A simple calculator application with a graphical user interface (GUI) built usin
 - Using functions as button commands
 - Organizing a simple GUI application
 - Handling errors with `try` and `except`
+- Updating labels dynamically during program execution
+- Storing and displaying previous calculation results
+- Using global variables to share data between functions
 
 ## Future Improvements
 
@@ -40,9 +44,14 @@ A simple calculator application with a graphical user interface (GUI) built usin
 - Add parentheses `(` and `)`
 - Add percentage (%) function
 - Add square root (√) and exponent (^)
-- Add calculation history
+- Add calculation history (improve more on this)
 - Improve the interface with colors and icons
 - Add more operations
+- Add a backspace (⌫) button
+- Add keyboard support for input
+- Allow users to view multiple previous calculations
+- Add a dark mode/light mode toggle
+- Make the calculator window resizable
 
 ## License
 
