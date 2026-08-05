@@ -2,7 +2,7 @@ import tkinter as tk
 
 window = tk.Tk()
 window.title("Calculator")
-window.geometry("400x500")
+window.geometry("400x550")
 window.resizable(False, False)
 
 display = tk.Entry(
@@ -12,6 +12,17 @@ display = tk.Entry(
     bd=10
 )
 display.pack(fill="x", padx=10, pady=20)
+
+previous_result = ""
+
+previous_label = tk.Label(
+    window,
+    text="Previous Result: None",
+    font=("Verdana", 12),
+    anchor="e"
+)
+previous_label.pack(fill="x", padx=15, pady=(0, 10))
+
 
 def button_click(value):
     current = display.get()
@@ -24,13 +35,22 @@ def clear():
 
 
 def calculate():
+    global previous_result
+
     try:
         answer = eval(display.get())
+
+        # Save and display the previous result
+        previous_result = answer
+        previous_label.config(text=f"Previous Result: {previous_result}")
+
         display.delete(0, tk.END)
         display.insert(0, answer)
+
     except:
         display.delete(0, tk.END)
         display.insert(0, "Error")
+
 
 button_frame = tk.Frame(window)
 button_frame.pack()
